@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: com.huang.SpringbootRedisApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 7.454 s <<< FAILURE! - in com.huang.SpringbootRedisApplicationTests
+contextLoads  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'redisController': Unsatisfied dependency expressed through field 'redisson'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisson' defined in class path resource [com/huang/config/RedissonConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.Redisson]: Factory method 'redisson' threw exception; nested exception is java.lang.IllegalArgumentException: port out of range:-1
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisson' defined in class path resource [com/huang/config/RedissonConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.Redisson]: Factory method 'redisson' threw exception; nested exception is java.lang.IllegalArgumentException: port out of range:-1
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.redisson.Redisson]: Factory method 'redisson' threw exception; nested exception is java.lang.IllegalArgumentException: port out of range:-1
+Caused by: java.lang.IllegalArgumentException: port out of range:-1
+
